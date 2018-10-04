@@ -1,5 +1,5 @@
 ProjectTitle: test-ilya
 
 PageList:
-- file: page.html
+- file: landing.html
   ready: 50

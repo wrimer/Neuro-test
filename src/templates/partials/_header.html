@@ -1,1 +1,40 @@
-<p>Hello from partials/_header.html</p>
+<!-- begin header -->
+<header class="header">
+  <div class="header__inner">
+
+    <!-- begin logo -->
+    <div class="logo">
+      <div class="logo__image">
+        {{ mixins.icon("logo") }}
+      </div>
+      <div class="logo__text">
+        <h1 class="logo__title">Neurobot<span class="logo__title--cyan">.trading</span></h1>
+        <p class="logo__description">Neural network forecasting</p>
+      </div>
+    </div>
+    <!-- end logo -->
+
+    <div class="header__menu">
+      <!-- begin navigation -->
+      <nav class="header__nav nav">
+        <ul class="nav__list">
+          {% for item in ["Forecasts", "Tokens", "About", "Log in"] %}
+            <li class="nav__item">
+              <a href="#" class="nav__link">{{ item }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+      <!-- end navigation -->
+      <a href="" class="header__login button button--border-middle">Sign Up</a>
+      <ul class="header__locale locale">
+        {% for locale in ["Eng", "Рус"] %}
+          <li class="locale__item">
+            <a href="#" class="locale__link">{{ locale }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</header>
+<!-- end header -->
