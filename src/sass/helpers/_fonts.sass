@@ -1,0 +1,27 @@
+//FONTS
+=fontpath($name, $name1, $file)
+	src: local($name), local($name1), url("../fonts/" + $file + ".woff2") format("woff2"), url("../fonts/" + $file + ".woff") format("woff")
+=fontdefault($style, $weight, $name)
+	font-family: $name
+	font-style: $style
+	font-weight: $weight
+
+// Montserrat
+@font-face
+	+fontdefault(normal, 200, 'Montserrat')
+	+fontpath('Montserrat Extra-Light', 'Montserrat-ExtraLight', Montserrat-ExtraLight)
+@font-face
+	+fontdefault(normal, 300, 'Montserrat')
+	+fontpath('Montserrat Light', 'Montserrat-Light', Montserrat-Light)
+@font-face
+	+fontdefault(normal, 400, 'Montserrat')
+	+fontpath('Montserrat', 'Montserrat-Regular', Montserrat-Regular)
+@font-face
+	+fontdefault(normal, 600, 'Montserrat')
+	+fontpath('Montserrat Semi-Bold', 'Montserrat-SemiBold', Montserrat-SemiBold)
+@font-face
+	+fontdefault(normal, 700, 'Montserrat')
+	+fontpath('Montserrat Bold', 'Montserrat-Bold', Montserrat-Bold)
+@font-face
+	+fontdefault(normal, 800, 'Montserrat')
+	+fontpath('Montserrat Extra-Bold', 'FuturaFuturis-Extrabold', FuturaFuturis-Extrabold)
