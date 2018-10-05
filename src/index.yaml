@@ -2,4 +2,4 @@ ProjectTitle: test-ilya
 
 PageList:
 - file: landing.html
-  ready: 50
+  ready: 10

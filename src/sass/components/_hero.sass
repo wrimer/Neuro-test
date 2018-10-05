@@ -1,0 +1,85 @@
+.hero
+	overflow: hidden
+	position: relative
+	height: 1300px
+	background-color: $blue
+
+	&:before
+		content: ""
+		top: -50%
+		position: absolute
+		width: 100%
+		height: 100%
+		transform: skewY(10deg)
+		background-color: $cyan
+
+	&__inner
+		max-width: 1170px
+		margin: auto
+
+	&__text
+		display: flex
+		max-width: 996px
+		margin: auto
+		position: relative
+		height: 578px
+
+	&__image
+		z-index: 1
+		position: absolute
+		height: 780px
+		top: -36px
+		left: -144px
+
+	&__title-wrapper
+		z-index: 1
+		font-family: $montserrat
+		color: $white
+		margin-left: auto
+		text-align: center
+		width: 62%
+
+	&__title
+		font-size: 72px
+
+	&__description
+		font-size: 30px
+
+	&__button
+		display: inline-block
+		margin-top: 10px
+
+	&__video
+		position: relative
+		display: flex
+		align-items: center
+		height: 722px
+		background: $white
+		border-radius: 10px
+
+	&__video-container
+		display: flex
+		width: 1080px
+		height: 624px
+		margin: auto
+		background: $black
+		border-radius: 10px
+
+	&__video-play
+		width: 120px
+		height: 120px
+		margin: auto
+		background: url("../../img/play-button.svg") no-repeat center
+		background-size: cover
+
+		&:hover
+			opacity: 0.7
+
+		&:active
+			opacity: 0.85
+
+
+
+
+
+
