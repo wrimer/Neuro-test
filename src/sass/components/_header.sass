@@ -1,37 +1,115 @@
 .header
+	font-family: $montserrat
 	color: $white
 	background-color: $cyan
+	padding: 64px 0 115px
 
 	&__inner
-		display: flex
-		max-width: 1000px
+		font-size: 0
 		margin: auto
+		max-width: 996px
+		display: flex
+		justify-content: space-between
 
 	&__menu
 		display: flex
+		align-items: center
+
+	&__nav
 
 	&__login
+		margin: 0 8px
+		text-decoration: none
+		font-weight: 600
 		font-size: 16px
 
+	&__lang
+
+//Logo
 .logo
+	font-family: $montserrat
 	display: flex
 
 	&__image
+		display: flex
+		align-items: center
+
 		.icon
+			width: 43px
+			height: 44px
 			fill: $white
 
+	&__text
+		margin-left: 12px
+
 	&__title
+		font-weight: 600
 		font-size: 24px
 
 	&__title--cyan
 		color: $light-cyan
 
 	&__description
+		line-height: 0.5
+		font-weight: 400
 		font-size: 13px
 
+//Navigation
 .nav
+	font-family: $montserrat
+
 	&__list
 		display: flex
 
+	&__item
+		margin: 0 17px
+		&:last-child
+			margin-right: 25px
+
 	&__link
+		text-decoration: none
+		color: $white
+		font-weight: 600
+		font-size: 16px
+		&:hover
+			text-decoration: underline
+		&:active
+			color: rgba($white, 0.7)
+
+//Lang
+.lang
+	font-family: $montserrat
+	position: relative
+
+	&__current
+		padding: 10px 24px
+		font-size: 16px
+		color: transparent
+
+	&__list
+		padding: 10px 25px
+		background-color: $white
+		border-radius: 20px
+		left: 0
+		top: 0
+		position: absolute
+
+		&:hover
+			.lang__item--hidden
+				display: block
+
+	&__item
+		font-size: 16px
+
+		&:hover
+			text-decoration: underline
+
+	&__item--hidden
+		display: none
+
+
+	&__link
+		text-decoration: none
+		color: $blue
+		font-weight: 600
 		font-size: 16px

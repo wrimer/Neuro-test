@@ -27,13 +27,18 @@
       </nav>
       <!-- end navigation -->
       <a href="" class="header__login button button--border-middle">Sign Up</a>
-      <ul class="header__locale locale">
-        {% for locale in ["Eng", "Рус"] %}
-          <li class="locale__item">
-            <a href="#" class="locale__link">{{ locale }}</a>
-          </li>
-        {% endfor %}
-      </ul>
+      <!-- begin lang -->
+      <div class="header__lang  lang">
+        <p class="lang__current">Eng</p>
+        <ul class="lang__list">
+          {% for lang in ["Eng", "Рус","Eng", "Рус","Eng", "Рус"] %}
+            <li class="lang__item {% if loop.index !== 1 %} lang__item--hidden {% endif %}">
+              <a href="#" class="lang__link">{{ lang }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <!-- end lang -->
     </div>
   </div>
 </header>
