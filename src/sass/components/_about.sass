@@ -21,7 +21,7 @@
 		border-radius: 18px
 		position: relative
 		max-width: 1170px
-		height: 1160px
+		min-height: 1160px
 		box-sizing: border-box
 		margin:  0 auto 44px
 		padding: 74px 50px 105px 95px
@@ -31,17 +31,21 @@
 		font-weight: 600
 		color: $blue
 
+	&__list-wrapper
+		display: flex
+		flex-wrap: wrap
+
 	&__list
+		width: 50%
 		display: flex
 		flex-wrap: wrap
 		flex-direction: column
-		max-height: 900px
 
 	&__item
 		margin-top: 20px
 		padding-right: 60px
 		display: flex
-		width: 50%
+		width: 100%
 
 		.icon
 			width: 50px

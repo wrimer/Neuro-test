@@ -1,14 +1,25 @@
 <section class="about">
   <div class="about__inner">
     <h1 class="about__title">How it works?</h1>
-    <ul class="about__list">
-      {% import "data/about-data.html" as data %}
-      {% for item in data.list %}
-        <li class="about__item">
-          {{ mixins.icon(item.icon) }}
-          <p class="about__text">{{ item.text }}</p>
-        </li>
-      {% endfor %}
-    </ul>
+    <div class="about__list-wrapper">
+      <ul class="about__list">
+        {% import "data/about-data.html" as data %}
+        {% for i in range(0,3) %}
+          <li class="about__item">
+            {{ mixins.icon(data.list[i].icon) }}
+            <p class="about__text">{{ data.list[i].text }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+      <ul class="about__list">
+        {% import "data/about-data.html" as data %}
+        {% for i in range(3,6) %}
+          <li class="about__item">
+            {{ mixins.icon(data.list[i].icon) }}
+            <p class="about__text">{{ data.list[i].text }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
   </div>
 </section>
