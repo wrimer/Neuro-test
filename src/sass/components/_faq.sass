@@ -1,0 +1,69 @@
+.faq
+	padding-top: 108px
+	background-color: $cyan
+	font-family: $montserrat
+	color: $blue
+
+	&__inner
+		background-color: $white
+		border-radius: 18px
+		padding: 80px 96px 100px
+		position: relative
+		max-width: 1170px
+		margin: auto
+
+	&__box
+		position: absolute
+		left: -90px
+		top: 90px
+		.icon
+			width: 116px
+			height: 135px
+
+	&__title
+		text-transform: capitalize
+		font-size: 72px
+		font-weight: 600
+		line-height: 1
+
+	&__title-thin
+		font-size: 72px
+		font-weight: 300
+
+	&__list
+		margin: 56px 0
+
+	&__item
+		position: relative
+		margin-left: 55px
+		line-height: 1.5
+		&:before
+			content: ""
+			position: absolute
+
+			top: 5px
+			left: -55px
+
+			width: 36px
+			height: 36px
+			background: url("../../img/arrow.png") no-repeat
+
+		&--active:before
+			transform: rotate(90deg)
+
+
+
+	&__question
+		margin-bottom: 16px
+		font-size: 30px
+		font-weight: 600
+
+	&__answer
+		margin: 13px 0 28px
+		line-height: 2
+		font-weight: 300
+
+
+
+
+

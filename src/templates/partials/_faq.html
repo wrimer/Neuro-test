@@ -1,0 +1,19 @@
+<!-- FAQ begin -->
+<section class="faq">
+  <div class="faq__inner">
+    <div class="faq__box">
+      {{ mixins.icon("cyan-box") }}
+    </div>
+    <h2 class="faq__title">Frequently asked<br/> <span class="faq__title-thin">questions</span></h2>
+    {% import "data/faq-data.html" as data %}
+    <ul class="faq__list">
+      {% for item in data.list %}
+      <li class="faq__item">
+        <p class="faq__question">{{ item.title }}</p>
+        <p class="faq__answer">{{ item.text }}</p>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>
+<!-- FAQ end -->
