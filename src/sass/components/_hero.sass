@@ -18,9 +18,14 @@
 			transform: skewY(30deg)
 			background-color: $cyan
 
+	&__inner
+		position: relative
+		max-width: 1170px
+		margin: auto
+
 	&__box
 		position: absolute
-		left: 112px
+		left: -260px
 		top: 174px
 		.icon
 			width: 116px
@@ -28,17 +33,13 @@
 
 	&__box-blurred
 		position: absolute
-		right: 275px
-		top: 335px
+		right: -96px
+		top: 336px
 		z-index: 1
 		.icon
 			filter: blur(15px)
 			width: 234px
 			height: 258px
-
-	&__inner
-		max-width: 1170px
-		margin: auto
 
 	&__text
 		display: flex
