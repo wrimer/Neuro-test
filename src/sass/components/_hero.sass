@@ -1,8 +1,9 @@
 .hero
-	padding-bottom: 100px
 	position: relative
 	height: 1300px
 	background-color: $blue
+	+md
+		height: 932px
 
 	&__background
 		overflow: hidden
@@ -17,6 +18,8 @@
 			height: 50000%
 			transform: skewY(30deg)
 			background-color: $cyan
+			+md
+				bottom: 38.5%
 
 	&__inner
 		position: relative
@@ -27,6 +30,9 @@
 		position: absolute
 		left: -260px
 		top: 174px
+		+md
+			left: -54px
+			top: 154px
 		.icon
 			width: 116px
 			height: 135px
@@ -36,6 +42,9 @@
 		right: -96px
 		top: 336px
 		z-index: 1
+		+md
+			right: -54px
+			top: 300px
 		.icon
 			filter: blur(15px)
 			width: 234px
@@ -47,6 +56,8 @@
 		margin: auto
 		position: relative
 		height: 578px
+		+md
+			height: 460px
 
 	&__image
 		position: absolute
@@ -54,6 +65,10 @@
 		top: -39px
 		left: -175px
 		z-index: 1
+		+md
+			height: 660px
+			top: -37px
+			left: -80px
 
 	&__title-wrapper
 		z-index: 1
@@ -68,11 +83,15 @@
 		font-size: 72px
 		margin-top: 15px
 		line-height: 1.1
+		+md
+			font-size: 48px
 
 	&__description
 		margin-top: 18px
 		font-weight: 600
 		font-size: 30px
+		+md
+			font-size: 18px
 
 	&__button
 		display: inline-block
@@ -86,6 +105,9 @@
 		background: $white
 		border-radius: 10px
 		padding: 49px
+		+md
+			padding: 26px
+			height: 472px
 
 	&__video-container
 		display: flex
@@ -94,6 +116,8 @@
 		height: 624px
 		background: $black
 		border-radius: 10px
+		+md
+			height: 420px
 
 	&__video-play
 		width: 120px

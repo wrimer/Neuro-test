@@ -5,6 +5,8 @@
 	position: relative
 	background-color: $cyan
 	padding-top: 145px
+	+md
+		padding-top: 86px
 
 	&:before
 		content: ""
@@ -25,11 +27,30 @@
 		box-sizing: border-box
 		margin:  0 auto 44px
 		padding: 74px 50px 105px 95px
+		+md
+			min-height: 810px
+			padding: 36px
+
+	&__big-box
+		position: absolute
+		.icon
+			width: 0
+			height: 0
+		+md
+			position: absolute
+			left: -270px
+			bottom: -90px
+			.icon
+				width: 333px
+				height: 333px
+
 
 	&__title
 		font-size: 60px
 		font-weight: 600
 		color: $blue
+		+md
+			font-size: 48px
 
 	&__list-wrapper
 		display: flex
@@ -46,6 +67,8 @@
 		padding-right: 60px
 		display: flex
 		width: 100%
+		+md
+			padding-right: 10px
 
 		.icon
 			width: 50px
@@ -57,5 +80,7 @@
 	&__text
 		font-weight: 300
 		line-height: 2
+		+md
+			font-size: 14px
 
 

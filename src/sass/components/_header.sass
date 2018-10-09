@@ -3,6 +3,8 @@
 	color: $white
 	background-color: $cyan
 	padding: 64px 0 115px
+	+md
+		padding: 45px 0 65px
 
 	&__inner
 		font-size: 0
@@ -10,6 +12,8 @@
 		max-width: 996px
 		display: flex
 		justify-content: space-between
+		+md
+			margin: 0 60px
 
 	&__menu
 		display: flex
@@ -37,6 +41,9 @@
 			width: 43px
 			height: 44px
 			fill: $white
+			+md
+				width: 33px
+				height: 33px
 
 	&__text
 		margin-left: 12px
@@ -44,6 +51,8 @@
 	&__title
 		font-weight: 600
 		font-size: 24px
+		+md
+			font-size: 18px
 
 	&__title--cyan
 		color: $light-cyan
@@ -52,6 +61,8 @@
 		line-height: 0.5
 		font-weight: 400
 		font-size: 13px
+		+md
+			font-size: 9.75px
 
 //Navigation
 .nav
@@ -74,16 +85,23 @@
 			text-decoration: underline
 		&:active
 			color: rgba($white, 0.7)
+		+md
+			font-size: 14px
 
 //Lang
 .lang
 	font-family: $montserrat
 	position: relative
+	+md
+		margin-left: 8px
 
 	&__current
 		padding: 10px 24px
 		font-size: 16px
 		color: transparent
+		+md
+			padding: 0
+			font-size: 14px
 
 	&__list
 		padding: 10px 24px
@@ -92,6 +110,9 @@
 		left: 0
 		top: 0
 		position: absolute
+		+md
+			background-color: transparent
+			padding: 0
 
 		&:hover
 			.lang__item--hidden
@@ -99,6 +120,8 @@
 
 	&__item
 		font-size: 16px
+		+md
+			font-size: 14px
 
 		&:hover
 			text-decoration: underline

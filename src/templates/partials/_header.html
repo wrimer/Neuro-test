@@ -1,44 +1,43 @@
 <!-- begin header -->
 <header class="header">
   <div class="header__inner">
-
     <!-- begin logo -->
-    <div class="logo">
-      <div class="logo__image">
-        {{ mixins.icon("logo") }}
+      <div class="logo">
+        <div class="logo__image">
+          {{ mixins.icon("logo") }}
+        </div>
+        <div class="logo__text">
+          <h1 class="logo__title">Neurobot<span class="logo__title--cyan">.trading</span></h1>
+          <p class="logo__description">Neural network forecasting</p>
+        </div>
       </div>
-      <div class="logo__text">
-        <h1 class="logo__title">Neurobot<span class="logo__title--cyan">.trading</span></h1>
-        <p class="logo__description">Neural network forecasting</p>
-      </div>
-    </div>
-    <!-- end logo -->
+      <!-- end logo -->
 
-    <div class="header__menu">
-      <!-- begin navigation -->
-      <nav class="header__nav nav">
-        <ul class="nav__list">
-          {% for item in ["Forecasts", "Tokens", "About", "Log in"] %}
-            <li class="nav__item">
-              <a href="#" class="nav__link">{{ item }}</a>
-            </li>
-          {% endfor %}
-        </ul>
-      </nav>
-      <!-- end navigation -->
-      <a href="#" class="header__login button button--border-middle">Sign Up</a>
-      <!-- begin lang -->
-      <div class="header__lang  lang">
-        <p class="lang__current">Eng</p>
-        <ul class="lang__list">
-          {% for lang in ["Eng", "Рус","Eng", "Рус","Eng", "Рус"] %}
-            <li class="lang__item {% if loop.index !== 1 %} lang__item--hidden {% endif %}">
-              <a href="#" class="lang__link">{{ lang }}</a>
-            </li>
-          {% endfor %}
-        </ul>
+      <div class="header__menu">
+        <!-- begin navigation -->
+        <nav class="header__nav nav">
+          <ul class="nav__list">
+            {% for item in ["Forecasts", "Tokens", "About", "Log in"] %}
+              <li class="nav__item">
+                <a href="#" class="nav__link">{{ item }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </nav>
+        <!-- end navigation -->
+        <a href="#" class="header__login button button--border-middle">Sign Up</a>
+        <!-- begin lang -->
+        <div class="header__lang  lang">
+          <p class="lang__current">Eng</p>
+          <ul class="lang__list">
+            {% for lang in ["Eng", "Рус"] %}
+              <li class="lang__item {% if loop.index !== 1 %} lang__item--hidden {% endif %}">
+                <a href="#" class="lang__link">{{ lang }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <!-- end lang -->
       </div>
-      <!-- end lang -->
     </div>
-  </div>
 </header>

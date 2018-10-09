@@ -11,6 +11,8 @@
 		position: relative
 		max-width: 1170px
 		margin: auto
+		+md
+			padding: 42px 36px
 
 	&__box
 		position: absolute
@@ -20,18 +22,26 @@
 			width: 116px
 			height: 135px
 
+		+md
+			left: auto
+			right: 40px
+			top: -50px
+
 	&__title
 		text-transform: capitalize
 		font-size: 72px
 		font-weight: 600
 		line-height: 1
+		+md
+			font-size: 48px
 
 	&__title-thin
-		font-size: 72px
 		font-weight: 300
 
 	&__list
 		margin: 56px 0
+		+md
+			margin: 34px 0
 
 	&__item
 		position: relative
@@ -60,6 +70,8 @@
 			margin: 13px 0 28px
 			line-height: 2
 			font-weight: 300
+			+md
+				font-size: 14px
 
 
 
@@ -67,6 +79,8 @@
 		margin-bottom: 16px
 		font-size: 30px
 		font-weight: 600
+		+md
+			font-size: 24px
 
 
 
