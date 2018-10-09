@@ -1,0 +1,142 @@
+.footer
+	overflow: hidden
+	position: relative
+	font-family: $montserrat
+	padding: 165px 0 62px
+	color: $white
+	background-color: $cyan
+
+	&:before
+		content: ""
+		position: absolute
+		width: 100%
+		height: 50000%
+		transform: skewY(30deg)
+		background-color: $blue
+		top: 105%
+
+	&__inner
+		position: relative
+		max-width: 972px
+		margin: auto
+
+	&__box-cyan
+		right: -308px
+		top: -62px
+		position: absolute
+		.icon
+			width: 116px
+			height: 135px
+
+	&__box-blue
+		left: -372px
+		top: 92px
+		position: absolute
+		.icon
+			width: 174px
+			height: 201px
+
+	//Top block
+	&__top
+		justify-content: center
+		height: 443px
+		display: flex
+
+	&__telegram
+		margin-top: 58px
+		width: 48%
+		display: flex
+		flex-direction: column
+
+	&__button-telegram
+		display: block
+		margin: 12px 0
+		font-weight: 600
+
+	&__email-link
+		margin: 16px 0 0 60px
+		text-decoration: none
+		color: $white
+		font-weight: 600
+
+	&__subscribe
+		width: 52%
+		display: flex
+		flex-direction: column
+		border: 16px $light-cyan solid
+		border-radius: 8px
+
+	&__subscribe-title
+		padding: 44px 50px 0
+		line-height: 1
+		font-size: 60px
+		font-weight: 600
+
+	&__subscribe-title--thin
+		font-weight: 200
+
+	&__email-wrapper
+		position: relative
+		margin: 36px 50px 50px
+		&:after
+			content: ""
+			position: absolute
+			background-color: $light-cyan
+			width: 100%
+			height: 2px
+			bottom: -15px
+
+	&__email
+		font-family: $montserrat
+		font-weight: 600
+		padding-left: 12px
+		width: 100%
+		color: white
+		background: none
+		font-size: 24px
+		&::placeholder
+			color: $white
+
+	&__button-mail
+		display: block
+		margin: 12px 50px
+		padding: 20px 0
+		text-align: center
+
+	//Bottom block
+	&__bottom
+		display: flex
+		padding-top: 52px
+
+	&__social
+		position: relative
+		width: 50%
+
+	&__list
+		display: flex
+
+	&__item
+		padding-right: 12px
+
+	&__social-link
+		display: block
+		.icon
+			fill: $white
+			width: 36px
+			height: 36px
+		&:hover
+			opacity: 0.7
+		&:active
+			opacity: 0.85
+
+	&__info
+		padding-top: 5px
+		text-align: right
+		width: 50%
+
+	&__link
+		margin-left: 38px
+		font-weight: 600
+		color: $white
+		text-decoration: none
+
