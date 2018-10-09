@@ -48,8 +48,18 @@
 			height: 36px
 			background: url("../../img/arrow.png") no-repeat
 
-		&--active:before
+		.faq__answer
+			font-size: 0
+
+	&__item--active
+		&:before
 			transform: rotate(90deg)
+
+		.faq__answer
+			font-size: 18px
+			margin: 13px 0 28px
+			line-height: 2
+			font-weight: 300
 
 
 
@@ -58,10 +68,7 @@
 		font-size: 30px
 		font-weight: 600
 
-	&__answer
-		margin: 13px 0 28px
-		line-height: 2
-		font-weight: 300
+
 
 
 
