@@ -7,16 +7,17 @@
     <div class="graph__big-box">
       {{ mixins.icon("blue-box") }}
     </div>
-    <h2 class="graph__title">Popular forecasts</h2>
-    <p class="graph__description">The forecasts are updated every 30 minutes</p>
-    <ul class="graph__buttons">
-      {% for btn in ["btc","ltc","eth","xrp","dash","xmr"] %}
-      <li class="graph__item">
-        <button class="graph__button button button--rectangle" id="{{ btn }}">{{ btn }}</button>
-      </li>
-      {% endfor %}
-    </ul>
+    <div class="wrapper">
+      <h2 class="graph__title">Popular forecasts</h2>
+      <p class="graph__description">The forecasts are updated every 30 minutes</p>
+      <ul class="graph__buttons">
+        {% for btn in ["btc","ltc","eth","xrp","dash","xmr"] %}
+          <li class="graph__item">
+            <button class="graph__button button button--rectangle" id="{{ btn }}">{{ btn }}</button>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
   </div>
-
   <div class="graph__content"></div>
 </section>
