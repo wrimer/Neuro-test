@@ -1,5 +1,5 @@
 ProjectTitle: test-ilya
 
 PageList:
-- file: landing.html
-  ready: 10
+- file: home.html
+  ready: 90

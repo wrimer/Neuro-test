@@ -1,4 +1,5 @@
 .faq
+	min-width: 320px
 	padding-top: 108px
 	background-color: $cyan
 	font-family: $montserrat
@@ -13,6 +14,9 @@
 		margin: auto
 		+md
 			padding: 42px 36px
+		+sm
+			padding: 34px 26px 6px 30px
+			max-width: 320px
 
 	&__box
 		position: absolute
@@ -21,11 +25,14 @@
 		.icon
 			width: 116px
 			height: 135px
-
 		+md
 			left: auto
 			right: 40px
 			top: -50px
+		+sm
+			right: auto
+			left: -65px
+			top: -90px
 
 	&__title
 		text-transform: capitalize
@@ -34,6 +41,8 @@
 		line-height: 1
 		+md
 			font-size: 48px
+		+sm
+			font-size: 36px
 
 	&__title-thin
 		font-weight: 300
@@ -57,6 +66,11 @@
 			width: 36px
 			height: 36px
 			background: url("../../img/arrow.png") no-repeat
+		+sm
+			&:before
+				background-size: contain
+				width: 30px
+				height: 30px
 
 		.faq__answer
 			font-size: 0
@@ -81,6 +95,8 @@
 		font-weight: 600
 		+md
 			font-size: 24px
+		+sm
+			font-size: 18px
 
 
 

@@ -2,8 +2,11 @@
 	position: relative
 	height: 1300px
 	background-color: $blue
+	min-width: 320px
 	+md
 		height: 932px
+	+sm
+		height: 720px
 
 	&__background
 		overflow: hidden
@@ -20,6 +23,8 @@
 			background-color: $cyan
 			+md
 				bottom: 38.5%
+			+sm
+				bottom: 22.5%
 
 	&__inner
 		position: relative
@@ -36,6 +41,8 @@
 		.icon
 			width: 116px
 			height: 135px
+		+sm
+			display: none
 
 	&__box-blurred
 		position: absolute
@@ -49,6 +56,8 @@
 			filter: blur(15px)
 			width: 234px
 			height: 258px
+		+sm
+			display: none
 
 	&__text
 		display: flex
@@ -58,17 +67,31 @@
 		height: 578px
 		+md
 			height: 460px
+		+sm
+			height: 290px
+			margin-bottom: 240px
 
 	&__image
-		position: absolute
+		background: url("../img/robot.png") no-repeat
+		background-size: contain
 		height: 820px
+		width: 100%
+		position: absolute
 		top: -39px
-		left: -175px
+		left: -90px
 		z-index: 1
 		+md
 			height: 660px
 			top: -37px
 			left: -80px
+		+sm
+			top: 50px
+			left: 0
+			width: 100vw
+			min-width: 320px
+			background-size: contain
+			background: url("../img/robot-320w.png") no-repeat center
+
 
 	&__title-wrapper
 		z-index: 1
@@ -77,6 +100,11 @@
 		margin-left: auto
 		text-align: center
 		width: 62%
+		+sm
+			height: 220px
+			max-width: 290px
+			margin: 0 auto
+			width: 100%
 
 	&__title
 		font-weight: 600
@@ -85,6 +113,8 @@
 		line-height: 1.1
 		+md
 			font-size: 48px
+		+sm
+			font-size: 35px
 
 	&__description
 		margin-top: 18px
@@ -92,10 +122,15 @@
 		font-size: 30px
 		+md
 			font-size: 18px
+		+sm
+			margin-top: 12px
 
 	&__button
 		display: inline-block
 		margin-top: 28px
+		+sm
+			padding: 14px 0
+			width: 100%
 
 	&__video
 		position: relative
@@ -108,6 +143,11 @@
 		+md
 			padding: 26px
 			height: 472px
+		+sm
+			height: 190px
+			padding: 9px
+			width: 290px
+			margin: auto
 
 	&__video-container
 		display: flex
@@ -118,6 +158,8 @@
 		border-radius: 10px
 		+md
 			height: 420px
+		+sm
+			height: 170px
 
 	&__video-play
 		width: 120px
@@ -125,6 +167,9 @@
 		margin: auto
 		background: url("../../img/play-button.svg") no-repeat center
 		background-size: cover
+		+sm
+			width: 60px
+			height: 60px
 
 		&:hover
 			opacity: 0.7

@@ -11,6 +11,8 @@
 		margin: auto
 		+md
 			margin: 0 72px
+		+sm
+			margin: 0 6px
 
 	&__box-blurred
 		position: absolute
@@ -21,6 +23,8 @@
 			filter: blur(25px)
 			width: 416px
 			height: 446px
+		+sm
+			display: none
 
 
 	&__title
@@ -31,15 +35,25 @@
 		+md
 			padding-top: 42px
 			font-size: 48px
+		+sm
+			max-width: 290px
+			margin: 0 auto
+			font-size: 36px
 
 
 	&__list
 		display: flex
 		justify-content: space-between
 		padding-top: 28px
+		+sm
+			padding-top: 0
+			flex-direction: column
+			flex-wrap: wrap
+			align-items: center
 
 	&__item
-		width: 31%
+		padding-top: 28px
+		width: 290px
 
 	&__image-wrapper
 		width: 300px
@@ -49,6 +63,9 @@
 		+md
 			width: 216px
 			height: 216px
+		+sm
+			width: 290px
+
 
 	&__image
 

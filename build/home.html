@@ -18,18 +18,21 @@
       <header class="header">
         <div class="header__inner">
           <!-- begin logo -->
-          <div class="logo">
-            <div class="logo__image">
-              <svg class="icon icon-logo">
-                <use xlink:href="img/sprite.svg#icon-logo"></use>
-              </svg>
+          <div class="header__logo-wrapper">
+            <div class="logo">
+              <div class="logo__image">
+                <svg class="icon icon-logo">
+                  <use xlink:href="img/sprite.svg#icon-logo"></use>
+                </svg>
+              </div>
+              <div class="logo__text">
+                <h1 class="logo__title">Neurobot<span class="logo__title--cyan">.trading</span></h1>
+                <p class="logo__description">Neural network forecasting</p>
+              </div>
             </div>
-            <div class="logo__text">
-              <h1 class="logo__title">Neurobot<span class="logo__title--cyan">.trading</span></h1>
-              <p class="logo__description">Neural network forecasting</p>
-            </div>
+            <!-- end logo -->
+            <div class="header__toggle"></div>
           </div>
-          <!-- end logo -->
           <div class="header__menu">
             <!-- begin navigation -->
             <nav class="header__nav nav">
@@ -49,7 +52,9 @@
               </ul>
             </nav>
             <!-- end navigation -->
-            <a href="#" class="header__login button button--border-middle">Sign Up</a>
+            <div class="header__login-wrapper">
+              <a href="#" class="header__login button button--border-middle">Sign Up</a>
+            </div>
             <!-- begin lang -->
             <div class="header__lang  lang">
               <p class="lang__current">Eng</p>
@@ -80,12 +85,12 @@
                 <use xlink:href="img/sprite.svg#icon-cyan-box"></use>
               </svg>
             </div>
+            <div class="hero__image"></div>
           </div>
         </div>
         <div class="wrapper">
           <div class="hero__inner">
             <div class="hero__text">
-              <img src="./img/robot.png" alt="robot" class="hero__image" />
               <div class="hero__title-wrapper">
                 <h2 class="hero__title">Forecasting Exchange Rates</h2>
                 <p class="hero__description">of Cryptocurrencies <br /> by Neural Network Algorithm</p>

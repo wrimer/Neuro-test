@@ -2,6 +2,7 @@
 <header class="header">
   <div class="header__inner">
     <!-- begin logo -->
+    <div class="header__logo-wrapper">
       <div class="logo">
         <div class="logo__image">
           {{ mixins.icon("logo") }}
@@ -12,32 +13,36 @@
         </div>
       </div>
       <!-- end logo -->
-
-      <div class="header__menu">
-        <!-- begin navigation -->
-        <nav class="header__nav nav">
-          <ul class="nav__list">
-            {% for item in ["Forecasts", "Tokens", "About", "Log in"] %}
-              <li class="nav__item">
-                <a href="#" class="nav__link">{{ item }}</a>
-              </li>
-            {% endfor %}
-          </ul>
-        </nav>
-        <!-- end navigation -->
-        <a href="#" class="header__login button button--border-middle">Sign Up</a>
-        <!-- begin lang -->
-        <div class="header__lang  lang">
-          <p class="lang__current">Eng</p>
-          <ul class="lang__list">
-            {% for lang in ["Eng", "Рус"] %}
-              <li class="lang__item {% if loop.index !== 1 %} lang__item--hidden {% endif %}">
-                <a href="#" class="lang__link">{{ lang }}</a>
-              </li>
-            {% endfor %}
-          </ul>
-        </div>
-        <!-- end lang -->
-      </div>
+      <div class="header__toggle"></div>
     </div>
+
+    <div class="header__menu">
+      <!-- begin navigation -->
+      <nav class="header__nav nav">
+        <ul class="nav__list">
+          {% for item in ["Forecasts", "Tokens", "About", "Log in"] %}
+            <li class="nav__item">
+              <a href="#" class="nav__link">{{ item }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </nav>
+      <!-- end navigation -->
+      <div class="header__login-wrapper">
+        <a href="#" class="header__login button button--border-middle">Sign Up</a>
+      </div>
+      <!-- begin lang -->
+      <div class="header__lang  lang">
+        <p class="lang__current">Eng</p>
+        <ul class="lang__list">
+          {% for lang in ["Eng", "Рус"] %}
+            <li class="lang__item {% if loop.index !== 1 %} lang__item--hidden {% endif %}">
+              <a href="#" class="lang__link">{{ lang }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <!-- end lang -->
+    </div>
+  </div>
 </header>

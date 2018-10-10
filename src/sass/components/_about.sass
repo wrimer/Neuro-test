@@ -5,6 +5,7 @@
 	position: relative
 	background-color: $cyan
 	padding-top: 145px
+	min-width: 320px
 	+md
 		padding-top: 86px
 
@@ -30,6 +31,10 @@
 		+md
 			min-height: 810px
 			padding: 36px
+		+sm
+			margin: 0 auto
+			max-width: 320px
+			padding: 30px 15px
 
 	&__big-box
 		position: absolute
@@ -43,6 +48,8 @@
 			.icon
 				width: 333px
 				height: 333px
+		+sm
+			display: none
 
 
 	&__title
@@ -51,36 +58,48 @@
 		color: $blue
 		+md
 			font-size: 48px
+		+sm
+			font-size: 36px
 
 	&__list-wrapper
 		display: flex
 		flex-wrap: wrap
+		+sm
+			flex-wrap: nowrap
+			flex-direction: column
 
 	&__list
 		width: 50%
 		display: flex
 		flex-wrap: wrap
 		flex-direction: column
+		+sm
+			width: 100%
 
 	&__item
 		margin-top: 20px
 		padding-right: 60px
 		display: flex
 		width: 100%
-		+md
-			padding-right: 10px
-
 		.icon
 			width: 50px
 			height: 50px
 			fill: $cyan
 			flex-shrink: 0
 			margin-right: 30px
+		+md
+			padding-right: 10px
+		+sm
+			.icon
+				margin-right: 15px
+
 
 	&__text
 		font-weight: 300
 		line-height: 2
 		+md
 			font-size: 14px
+		+sm
+			line-height: 1.4
 
 

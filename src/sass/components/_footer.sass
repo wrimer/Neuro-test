@@ -5,6 +5,10 @@
 	padding: 165px 0 62px
 	color: $white
 	background-color: $cyan
+	min-width: 320px
+	+sm
+		padding-bottom: 45px
+		padding-top: 65px
 
 	&:before
 		content: ""
@@ -16,6 +20,8 @@
 		top: 105%
 		+md
 			top: 92%
+		+sm
+			top: 80%
 
 	&__inner
 		position: relative
@@ -23,6 +29,10 @@
 		margin: 0 auto
 		+md
 			margin: 0 72px
+		+sm
+			margin: 0 6px
+			max-width: 320px
+			margin: 0 auto
 
 	&__box-cyan
 		right: -308px
@@ -34,6 +44,9 @@
 		+md
 			right: -22px
 			top: -86px
+		+sm
+			right: -64px
+			top: -50px
 
 	&__box-blue
 		left: -372px
@@ -46,6 +59,9 @@
 			left: 250px
 			top: auto
 			bottom: -180px
+		+sm
+			left: 196px
+			bottom: 58px
 
 	//Top block
 	&__top
@@ -54,6 +70,12 @@
 		display: flex
 		+md
 			height: 380px
+		+sm
+			box-sizing: border-box
+			padding: 0 15px
+			flex-direction: column-reverse
+			height: auto
+			align-items: center
 
 	&__telegram
 		margin-top: 58px
@@ -62,11 +84,26 @@
 		flex-direction: column
 		+md
 			width: 45%
+		+sm
+			width: 100%
 
 	&__button-telegram
 		display: block
 		margin: 12px 0
 		font-weight: 600
+		&:before
+			background: url("../img/telegram.svg") no-repeat
+			position: absolute
+			display: block
+			left: 50px
+			content: ''
+			width: 24px
+			height: 24px
+			+md
+				left: 25px
+			+sm
+				left: 50px
+
 
 	&__email-link
 		margin: 16px 0 0 60px
@@ -75,6 +112,8 @@
 		font-weight: 600
 		+md
 			margin-left: 0
+		+sm
+			margin: 16px auto
 
 	&__subscribe
 		width: 52%
@@ -84,6 +123,8 @@
 		border-radius: 8px
 		+md
 			width: 55%
+		+sm
+			width: 100%
 
 	&__subscribe-title
 		padding: 44px 50px 0
@@ -93,6 +134,9 @@
 		+md
 			font-size: 48px
 			padding: 44px 32px 0
+		+sm
+			padding: 34px 34px 0
+			font-size: 36px
 
 	&__subscribe-title--thin
 		font-weight: 200
@@ -100,8 +144,6 @@
 	&__email-wrapper
 		position: relative
 		margin: 36px 50px 50px
-		+md
-			margin: 36px 32px 0
 		&:after
 			content: ""
 			position: absolute
@@ -109,7 +151,10 @@
 			width: 100%
 			height: 2px
 			bottom: -15px
-
+		+md
+			margin: 36px 32px 0
+		+sm
+			margin: 19px 32px 0
 
 	&__email
 		font-family: $montserrat
@@ -123,6 +168,8 @@
 			color: $white
 		+md
 			font-size: 18px
+		+sm
+			font-size: 16px
 
 	&__button-mail
 		display: block
@@ -131,15 +178,24 @@
 		text-align: center
 		+md
 			margin: 54px 32px
+		+sm
+			padding: 20px 0
+			margin: 40px 38px
 
 	//Bottom block
 	&__bottom
 		display: flex
+		flex-direction: column
 		padding-top: 88px
+		+sm
+			padding-left: 15px
+			padding-top: 200px
 
 	&__social
 		position: relative
-		width: 50%
+		width: 100%
+		+sm
+			padding-bottom: 12px
 
 	&__list
 		display: flex
@@ -161,11 +217,16 @@
 	&__info
 		padding-top: 5px
 		text-align: right
-		width: 50%
+		width: 100%
+		+sm
+			text-align: left
 
 	&__link
 		margin-left: 38px
 		font-weight: 600
 		color: $white
 		text-decoration: none
+		+sm
+			margin-left: 0
+			margin-right: 39px
 

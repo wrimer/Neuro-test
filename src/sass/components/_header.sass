@@ -3,8 +3,11 @@
 	color: $white
 	background-color: $cyan
 	padding: 64px 0 115px
+	min-width: 320px
 	+md
 		padding: 45px 0 65px
+	+sm
+		padding: 45px 0 0
 
 	&__inner
 		font-size: 0
@@ -14,19 +17,87 @@
 		justify-content: space-between
 		+md
 			margin: 0 60px
+		+sm
+			margin: 0 15px
+			display: flex
+			flex-wrap: wrap
 
 	&__menu
 		display: flex
 		align-items: center
+		+sm
+			display: none
+			flex-direction: column
+			width: 100%
 
 	&__nav
+
+	&__login-wrapper
+		+sm
+			text-align: center
+			width: 100%
+			padding: 15px 0
 
 	&__login
 		margin: 0 8px
 		font-weight: 600
 		font-size: 16px
+		+sm
+			color: $white
+			background: transparent
+			&:hover
+				text-decoration: underline
+				background: transparent
+			&:active
+				background: transparent
 
 	&__lang
+
+	&__logo-wrapper
+		+sm
+			position: relative
+			display: flex
+			align-items: center
+			justify-content: space-between
+			width: 100%
+
+	&__toggle
+		display: none
+		+sm
+			position: relative
+			display: block
+			width: 16px
+			height: 14px
+			top: 0
+			right: 0
+			border-top: 2px $white solid
+			border-bottom: 2px $white solid
+			cursor: pointer
+			&:before
+				content: ""
+				position: absolute
+				display: block
+				top: 4px
+				background-color: $white
+				width: 16px
+				height: 2px
+
+	&__toggle-close
+		+sm
+			border-top: none
+			border-bottom: none
+			&:after
+				transform: rotate(45deg)
+				content: ""
+				position: absolute
+				display: block
+				top: 4px
+				background-color: $white
+				width: 16px
+				height: 2px
+			&:before
+				transform: rotate(-45deg)
+
 
 //Logo
 .logo
@@ -36,7 +107,6 @@
 	&__image
 		display: flex
 		align-items: center
-
 		.icon
 			width: 43px
 			height: 44px
@@ -67,14 +137,26 @@
 //Navigation
 .nav
 	font-family: $montserrat
+	+sm
+		width: 100%
 
 	&__list
 		display: flex
+		+sm
+			flex-direction: column
 
 	&__item
 		margin: 0 17px
 		&:last-child
 			margin-right: 25px
+		+sm
+			margin: 0
+			padding: 15px 0
+			text-align: center
+			&:first-child
+				border-top: none
+			&:last-child
+				margin: 0
 
 	&__link
 		text-decoration: none
@@ -94,6 +176,10 @@
 	position: relative
 	+md
 		margin-left: 8px
+	+sm
+		margin: 0
+		width: 100%
+		padding: 15px 0
 
 	&__current
 		padding: 10px 24px
@@ -102,6 +188,8 @@
 		+md
 			padding: 0
 			font-size: 14px
+		+sm
+			display: none
 
 	&__list
 		padding: 10px 24px
@@ -113,6 +201,10 @@
 		+md
 			background-color: transparent
 			padding: 0
+		+sm
+			justify-content: center
+			display: flex
+			position: static
 
 		&:hover
 			.lang__item--hidden
@@ -122,16 +214,22 @@
 		font-size: 16px
 		+md
 			font-size: 14px
+		+sm
+			padding: 0 5px
 
 		&:hover
 			text-decoration: underline
 
 	&__item--hidden
 		display: none
-
+		+sm
+			display: block
 
 	&__link
 		text-decoration: none
 		color: $blue
 		font-weight: 600
 		font-size: 16px
+		+sm
+			font-size: 14px
+			color: $white
