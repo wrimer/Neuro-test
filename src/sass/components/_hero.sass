@@ -72,22 +72,25 @@
 			margin-bottom: 240px
 
 	&__image
+		pointer-events: none
 		background: url("../img/robot.png") no-repeat
-		background-size: contain
-		height: 820px
+		background-size: auto
+		height: 960px
 		width: 100%
 		position: absolute
-		top: -39px
+		top: -181px
 		left: -90px
 		z-index: 1
 		+md
-			height: 660px
-			top: -37px
-			left: -80px
+			background-size: contain
+			height: 657px
+			top: -57px
+			left: -30px
 		+sm
+			height: 660px
 			top: 50px
 			left: 0
-			width: 100vw
+			width: 100%
 			min-width: 320px
 			background-size: contain
 			background: url("../img/robot-320w.png") no-repeat center
@@ -165,7 +168,7 @@
 		width: 120px
 		height: 120px
 		margin: auto
-		background: url("../../img/play-button.svg") no-repeat center
+		background: url("../img/play-button.svg") no-repeat center
 		background-size: cover
 		+sm
 			width: 60px

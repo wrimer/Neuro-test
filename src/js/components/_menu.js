@@ -1,7 +1,7 @@
 $(document).ready(function() {
   $('.header__toggle').on('click', menu);
 
-  var x = window.matchMedia('(max-width: 839px)');
+  var x = window.matchMedia('(max-width: 767px)');
   responseListener(x);
   x.addListener(responseListener);
 });
