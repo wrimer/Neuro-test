@@ -1,0 +1,87 @@
+.tokens
+	position: relative
+	background-color: $cyan
+
+	&__wrapper
+		position: relative
+		border-radius: 16px
+		padding: 72px 102px 108px 95px
+		background: $white
+		max-width: 1170px
+		margin: auto
+
+	&__box
+		z-index: 1
+		pointer-events: none
+		position: absolute
+		top:  -53px
+		right: 276px
+
+	&__box_blurred-md
+		position: absolute
+		top: 228px
+		right:  -170px
+
+	&__box_blurred-lg
+		position: absolute
+		top: 400px
+		left:  -440px
+		
+	&__title
+		line-height: 1
+		
+	&__text
+		line-height: 2
+		margin-top: 32px
+		font-family: $montserrat
+		font-weight: 300
+
+	&__neb
+		margin-top: 40px
+		
+	&__form
+		display: flex
+		margin-top: 22px
+		&:after
+			content: ''
+			display: block
+			top: 0
+			bottom: 0
+			width: 98px
+			border-bottom-right-radius: 8px
+			border-top-right-radius: 8px
+			background: $light-cyan url("../img/copy.png") no-repeat center
+			background-size: 28px
+
+		
+	&__token
+		color: $blue
+		position: relative
+		padding: 26px 40px
+		border: 8px $light-cyan solid
+		border-bottom-left-radius: 8px
+		border-top-left-radius: 8px
+		width: 100%
+		font-size: 24px
+		font-weight: 600
+		letter-spacing: 1.6px
+
+
+
+	&__buttons
+		display: flex
+		margin-top: 49px
+		
+	&__button
+		padding: 16px 0
+		margin-right: 50px
+		font-weight: 600
+		box-sizing: border-box
+		text-align: center
+		width: 370px
+
+	&__button_white
+		color: $blue
+		background-color: $white
+		border: 3px $blue solid
+
