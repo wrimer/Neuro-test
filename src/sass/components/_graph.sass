@@ -28,6 +28,7 @@
 			display: none
 
 	&__big-box
+		z-index: 1
 		position: absolute
 		left: -525px
 		top: 54px
@@ -94,15 +95,77 @@
 			height: 50px
 
 	&__content
+		position: relative
 		width: 100%
+		max-width: 1844px
 		height: 564px
-		margin-top: 42px
-		background-color: $dark-blue
+		margin: 26px auto 0
+		background: $blue url("../img/forecast.png") no-repeat right
 		+md
 			width: auto
 			margin: 42px 36px 0
 		+sm
 			height: 490px
-			margin: 30px 6px 0
+			margin: 120px 6px 0 15px
+
+	&__stat
+		font-family: $montserrat
+		color: $white
+		position: absolute
+		display: flex
+		align-items: baseline
+		top: 45px
+		left: 485px
+		+md
+			top: 22px
+			left: 52px
+		+sm
+			top: -90px
+			left: 0px
+			width: 100%
+			justify-content: space-between
+
+	&__stat-currency
+		margin-right: 28px
+		text-transform: uppercase
+		font-size: 24px
+		font-weight: 700
+		display: flex
+		flex-direction: column
+		+sm
+			font-size: 18px
+		&:before,&:after
+			content: "-"
+			color: transparent
+			font-size: 12px
+			+sm
+				font-size: 10px
+
+	&__stat-item
+		text-align: right
+		margin: 0 18px
+		+sm
+			margin: 0 9px
+
+	&__stat-title
+		font-size: 12px
+		font-weight: 400
+		+sm
+			font-size: 10px
+
+	&__stat-value
+		font-size: 24px
+		font-weight: 700
+		+sm
+			font-size: 18px
+
+	&__stat-change
+		font-size: 12px
+		font-weight: 400
+		color: $green
+		+sm
+			font-size: 10px
+
+
 
 
