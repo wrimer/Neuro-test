@@ -36,7 +36,8 @@
 			padding-top: 42px
 			font-size: 48px
 		+sm
-			max-width: 290px
+			text-align: center
+			min-width: 290px
 			margin: 0 auto
 			font-size: 36px
 
@@ -54,6 +55,11 @@
 	&__item
 		padding-top: 28px
 		width: 31%
+		+sm
+			display: flex
+			flex-direction: column
+			align-items: center
+			width: 100%
 
 	&__image
 		width: 300px
@@ -65,7 +71,7 @@
 			width: 100%
 			height: 216px
 		+sm
-			width: 290px
+			min-width: 290px
 
 	&__item-title
 		margin-top: 14px
@@ -74,12 +80,16 @@
 		font-size: 30px
 		+md
 			font-size: 24px
+		+sm
+			text-align: center
 
 	&__description
 		margin-top: 12px
 		line-height: 1.7
 		font-weight: 400
 		font-size: 14px
+		+sm
+			text-align: center
 
 	&__button
 		font-weight: 600

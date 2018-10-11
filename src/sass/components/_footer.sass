@@ -30,9 +30,8 @@
 		+md
 			margin: 0 72px
 		+sm
-			margin: 0 6px
-			max-width: 320px
-			margin: 0 auto
+			margin: 0 10px
+			min-width: 290px
 
 	&__box-cyan
 		right: -308px
@@ -45,7 +44,7 @@
 			right: -22px
 			top: -86px
 		+sm
-			right: -64px
+			right: -72px
 			top: -50px
 
 	&__box-blue
@@ -72,7 +71,6 @@
 			height: 380px
 		+sm
 			box-sizing: border-box
-			padding: 0 15px
 			flex-direction: column-reverse
 			height: auto
 			align-items: center
@@ -85,12 +83,14 @@
 		+md
 			width: 45%
 		+sm
+			align-items: center
 			width: 100%
 
 	&__button-telegram
 		display: block
 		margin: 12px 0
 		font-weight: 600
+		position: relative
 		&:before
 			background: url("../img/telegram.svg") no-repeat
 			position: absolute
@@ -102,7 +102,7 @@
 			+md
 				left: 25px
 			+sm
-				left: 50px
+				left: 35px
 
 
 	&__email-link
@@ -188,6 +188,7 @@
 		flex-direction: row
 		padding-top: 88px
 		+sm
+			flex-direction: column
 			padding-left: 15px
 			padding-top: 200px
 
