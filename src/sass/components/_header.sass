@@ -1,4 +1,5 @@
 .header
+	position: relative
 	font-family: $montserrat
 	color: $white
 	background-color: $cyan
@@ -26,9 +27,15 @@
 		display: flex
 		align-items: center
 		+sm
-			display: none
+			opacity: 0
+			pointer-events: none
+			background-color: white
+			z-index: 2
+			top: 100%
+			left: 0
+			position: absolute
 			flex-direction: column
-			width: 100%
+			width: 100vw
 
 	&__nav
 
@@ -43,7 +50,7 @@
 		font-weight: 600
 		font-size: 16px
 		+sm
-			color: $white
+			color: $black
 			background: transparent
 			&:hover
 				text-decoration: underline
@@ -87,15 +94,16 @@
 			border-top: none
 			border-bottom: none
 			&:after
+				background-color: $black
 				transform: rotate(45deg)
 				content: ""
 				position: absolute
 				display: block
 				top: 4px
-				background-color: $white
 				width: 16px
 				height: 2px
 			&:before
+				background-color: $black
 				transform: rotate(-45deg)
 
 
@@ -108,6 +116,7 @@
 		display: flex
 		align-items: center
 		.icon
+			transition: 400ms
 			width: 43px
 			height: 44px
 			fill: $white
@@ -117,6 +126,9 @@
 
 	&__text
 		margin-left: 12px
+		+sm
+			transition: 400ms
+
 
 	&__title
 		font-weight: 600
@@ -173,6 +185,8 @@
 			color: rgba($white, 0.7)
 		+md
 			font-size: 14px
+		+sm
+			color: $black
 
 //Lang
 .lang
@@ -236,4 +250,21 @@
 		font-size: 16px
 		+sm
 			font-size: 14px
-			color: $white
+			color: $black
+
+.header--opened
+	+sm
+		transition: 400ms
+		background-color: $white
+		.logo__image
+			.icon
+				transition: 400ms
+				fill: black
+		.logo__text
+			color: black
+			transition: 400ms
+		.header__menu
+			opacity: 1
+			pointer-events: auto
+			transition: 400ms
+

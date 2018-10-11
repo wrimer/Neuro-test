@@ -8,14 +8,13 @@ $(document).ready(function() {
 
 function menu() {
   $(this).toggleClass('header__toggle-close');
-  $('.header__menu').slideToggle(400);
+  $('.header').toggleClass('header--opened');
 }
 
 function responseListener(x) {
   if (x.matches) {
-    $('.header__menu').css({'display': 'none'});
+    $('.header').removeClass('header--opened');
   } else {
-    $('.header__menu').css({'display': 'flex'});
     $('.header__toggle').removeClass('header__toggle-close');
   }
 }
