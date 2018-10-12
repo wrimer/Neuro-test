@@ -1,27 +1,38 @@
 <!-- tokens begin -->
 <section class="tokens">
-  <div class="tokens__wrapper">
-    <div class="tokens__box_blurred-md box_blurred-md">
-      {{ mixins.icon("cyan-box") }}
+  <div class="tokens__background">
+    <div class="tokens__inner">
+      <div class="tokens__box_blurred-md box_blurred-md">
+        {{ mixins.icon("cyan-box") }}
+      </div>
+      <div class="tokens__box_blurred-lg box_blurred-lg">
+        {{ mixins.icon("cyan-box") }}
+      </div>
+      <div class="tokens__box_overflowed box">
+        {{ mixins.icon("cyan-box") }}
+      </div>
     </div>
-    <div class="tokens__box_blurred-lg box_blurred-lg">
-      {{ mixins.icon("cyan-box") }}
-    </div>
-    <div class="tokens__box box">
-      {{ mixins.icon("cyan-box") }}
-    </div>
-    <h2 class="tokens__title title title_blue">Tokens</h2>
-    {% import "data/tokens-data.html" as data %}
-    {% for item in data.list %}
-      <p class="tokens__text">{{ item.text }}</p>
-    {% endfor %}
-    <h3 class="tokens__neb title title_blue title_md">NEB contract address</h3>
-    <form class="tokens__form">
-      <input type="text" class="tokens__token" readonly="readonly" value="0xd84500DDAF560dF7bE57702b3A8769A782Ce0277"/>
-    </form>
-    <div class="tokens__buttons">
-      <a href="#" class="tokens__button button">Etherscan.io</a>
-      <a href="#" class="tokens__button tokens__button_white button">Etherdela.com</a>
+  </div>
+  <div class="tokens__outer">
+    <div class="tokens__wrapper">
+      <div class="tokens__box box">
+        {{ mixins.icon("cyan-box") }}
+      </div>
+      <h2 class="tokens__title title title_blue">Tokens</h2>
+      {% import "data/tokens-data.html" as data %}
+      {% for item in data.list %}
+        <p class="tokens__text">{{ item.text }}</p>
+      {% endfor %}
+      <h3 class="tokens__neb title title_blue title_md">NEB contract address</h3>
+      <form class="tokens__form">
+        <input type="text" class="tokens__token" readonly="readonly"
+               value="0xd84500DDAF560dF7bE57702b3A8769A782Ce0277"/>
+      </form>
+      <div class="tokens__buttons">
+        <a href="#" class="tokens__button button">Etherscan.io</a>
+        <a href="#" class="tokens__button tokens__button_white button">Etherdela.com</a>
+      </div>
     </div>
   </div>
 </section>
+

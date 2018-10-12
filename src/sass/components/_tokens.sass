@@ -1,14 +1,32 @@
 .tokens
+	min-width: 320px
 	position: relative
 	background-color: $cyan
+	+sm
+		padding-top: 40px
 
-	&__wrapper
+	&__background
+		pointer-events: none
+		position: absolute
+		height: 100%
+		width: 100%
+		overflow: hidden
+		+sm
+			top: -40px
+
+	&__outer
+		max-width: 1314px
+		margin: auto
+		+md
+			max-width: 840px
+
+	&__inner
 		position: relative
-		border-radius: 16px
-		padding: 72px 102px 108px 95px
-		background: $white
 		max-width: 1170px
 		margin: auto
+		z-index: 1
+		+md
+			max-width: 768px
 
 	&__box
 		z-index: 1
@@ -16,17 +34,60 @@
 		position: absolute
 		top:  -53px
 		right: 276px
+		+md
+			.icon
+				width: 0
+				height: 0
+
+	&__box_overflowed
+		position: absolute
+		top: -9000px
+		left: -9000px
+		+md
+			z-index: 1
+			pointer-events: none
+			top:  22px
+			right: -78px
+			left: auto
+		+sm
+			.icon
+				width: 0
+				height: 0
 
 	&__box_blurred-md
 		position: absolute
 		top: 228px
 		right:  -170px
+		+md
+			.icon
+				width: 0
+				height: 0
 
 	&__box_blurred-lg
 		position: absolute
 		top: 400px
 		left:  -440px
-		
+		+md
+			.icon
+				width: 0
+				height: 0
+
+	&__wrapper
+		position: relative
+		border-radius: 16px
+		padding: 72px 102px 108px 95px
+		background: $white
+		max-width: 1170px
+		margin: 0 72px
+		+md
+			max-width: 768px
+			padding: 36px 42px 46px 38px
+			margin: 0 36px
+		+sm
+			border-radius: 8px
+			padding: 24px 14px 36px 24px
+			margin: 0 6px
+
 	&__title
 		line-height: 1
 		
@@ -35,13 +96,22 @@
 		margin-top: 32px
 		font-family: $montserrat
 		font-weight: 300
+		+md
+			margin-top: 15px
+			font-size: 14px
+			line-height: 1.6
 
 	&__neb
 		margin-top: 40px
+		+md
+			margin-top: 35px
 		
 	&__form
 		display: flex
 		margin-top: 22px
+		+sm
+			margin-right: 10px
+			margin-top: 14px
 		&:after
 			content: ''
 			display: block
@@ -52,6 +122,9 @@
 			border-top-right-radius: 8px
 			background: $light-cyan url("../img/copy.png") no-repeat center
 			background-size: 28px
+		+md
+			&:after
+				width: 70px
 
 		
 	&__token
@@ -65,23 +138,53 @@
 		font-size: 24px
 		font-weight: 600
 		letter-spacing: 1.6px
+		text-overflow: ellipsis
+		+md
+			padding: 18px 22px
+			font-size: 18px
+		+sm
+			border-width: 6px
+			padding: 16px 16px
+			font-size: 14px
 
 
 
 	&__buttons
 		display: flex
 		margin-top: 49px
+		+md
+			margin-top: 35px
+			justify-content: space-between
+		+sm
+			margin-top: 16px
+			align-items: center
+			flex-direction: column
 		
 	&__button
+		border: 3px $blue solid
 		padding: 16px 0
 		margin-right: 50px
 		font-weight: 600
 		box-sizing: border-box
 		text-align: center
 		width: 370px
+		+md
+			width: 330px
+			margin-right: 0
+		+sm
+			padding: 10px 0
+			width: 260px
 
 	&__button_white
 		color: $blue
 		background-color: $white
-		border: 3px $blue solid
+		&:hover
+			background-color: #eeeeee
+		&:active
+			background-color: #dddddd
+		+md
+			margin-left: 5px
+		+sm
+			margin-top: 16px
+			margin-left: 0
 
