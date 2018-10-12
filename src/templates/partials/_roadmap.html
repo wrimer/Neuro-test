@@ -1,0 +1,27 @@
+<!-- Roadmap begin -->
+<section class="roadmap">
+  <div class="roadmap__bg"></div>
+  <div class="roadmap__wrapper">
+    <h2 class="roadmap__title title title_white">
+      Roadmap<br/>
+      <span class="roadmap__title-small">2017-2018</span>
+    </h2>
+    {% import "data/roadmap-data.html" as data %}
+    <ul class="roadmap__list">
+      {% for item in data.list %}
+        <li class="roadmap__item">
+          <div class="roadmap__icon">
+            {{ mixins.icon(item.theme) }}
+          </div>
+          <div class="roadmap__textarea">
+          <h3 class="roadmap__item-title">{{ item.title }}</h3>
+          <p class="roadmap__item-description">{{ item.text}}</p>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+
+
+
+</section>
