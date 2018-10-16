@@ -4,4 +4,4 @@ PageList:
 - file: home.html
   ready: 100
 - file: tokens.html
-  ready: 0
+  ready: 50
