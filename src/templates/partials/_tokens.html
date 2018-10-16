@@ -1,23 +1,7 @@
 <!-- tokens begin -->
 <section class="tokens">
-  <div class="tokens__background">
-    <div class="tokens__inner">
-      <div class="tokens__box_blurred-md box_blurred-md">
-        {{ mixins.icon("cyan-box") }}
-      </div>
-      <div class="tokens__box_blurred-lg box_blurred-lg">
-        {{ mixins.icon("cyan-box") }}
-      </div>
-      <div class="tokens__box_overflowed box">
-        {{ mixins.icon("cyan-box") }}
-      </div>
-    </div>
-  </div>
   <div class="tokens__outer">
     <div class="tokens__wrapper">
-      <div class="tokens__box box">
-        {{ mixins.icon("cyan-box") }}
-      </div>
       <h2 class="tokens__title title title_blue">Tokens</h2>
       {% import "data/tokens-data.html" as data %}
       {% for item in data.list %}
