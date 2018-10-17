@@ -1,0 +1,45 @@
+<!-- Footer begin -->
+<footer class="home-footer">
+  <div class="home-footer__inner">
+    <div class="home-footer__box-cyan">
+      {{ mixins.icon("cyan-box") }}
+    </div>
+    <div class="home-footer__box-blue">
+      {{ mixins.icon("blue-box") }}
+    </div>
+    <div class="home-footer__top">
+      <div class="home-footer__telegram">
+        {% for item in ["bot", "group", "channel"] %}
+          <a href="#" class="home-footer__button-telegram button button--telegram">Telegram {{ item }}</a>
+        {% endfor %}
+        <a href="mailto:support@neurobot.trading" class="home-footer__email-link">support@neurobot.trading</a>
+      </div>
+      <form class="home-footer__subscribe">
+        <h3 class="home-footer__subscribe-title">Subscribe <br/>
+          <span class="home-footer__subscribe-title--thin">to our news</span>
+        </h3>
+        <div class="home-footer__email-wrapper">
+          <input type="email" class="home-footer__email" placeholder="e-mail"/>
+        </div>
+        <a href="" class="home-footer__button-mail button">Subscribe</a>
+      </form>
+    </div>
+    <div class="home-footer__bottom">
+      <div class="home-footer__social">
+        <ul class="home-footer__list">
+          {% for item in ["facebook","instagram","youtube","vkontakte"] %}
+            <li class="home-footer__item">
+              <a href="#" class="home-footer__social-link" aria-label="{{ item }}">
+                {{ mixins.icon(item) }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+      <div class="home-footer__info">
+        <a href="#" class="home-footer__link">Cookies</a>
+        <a href="#" class="home-footer__link">Privacy Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>

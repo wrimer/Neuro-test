@@ -1,233 +1,83 @@
 .footer
-	overflow: hidden
-	position: relative
-	font-family: $montserrat
-	padding: 165px 0 62px
-	color: $white
 	background-color: $cyan
-	min-width: 320px
-	+sm
-		padding-bottom: 45px
-		padding-top: 65px
+	position: relative
 
-	&:before
-		content: ""
+	&__background
 		position: absolute
 		width: 100%
-		height: 50000%
-		transform: skewY(30deg)
-		background-color: $blue
-		top: 105%
-		+md
-			top: 92%
-		+sm
-			top: 80%
-
-	&__inner
-		position: relative
-		max-width: 972px
-		margin: 0 auto
-		+md
-			margin: 0 72px
-		+sm
-			margin: 0 10px
-			min-width: 290px
-
-	&__box-cyan
-		right: -308px
-		top: -62px
-		position: absolute
-		.icon
-			width: 116px
-			height: 135px
-		+md
-			right: -22px
-			top: -86px
-		+sm
-			right: -72px
-			top: -50px
-
-	&__box-blue
-		left: -372px
-		top: 92px
-		position: absolute
-		.icon
-			width: 174px
-			height: 201px
-		+md
-			left: 250px
-			top: auto
-			bottom: -180px
-		+sm
-			left: 196px
-			bottom: 58px
-
-	//Top block
-	&__top
-		justify-content: center
-		height: 443px
-		display: flex
-		+md
-			height: 380px
-		+sm
-			box-sizing: border-box
-			flex-direction: column-reverse
-			height: auto
-			align-items: center
-
-	&__telegram
-		margin-top: 58px
-		width: 48%
-		display: flex
-		flex-direction: column
-		+md
-			width: 45%
-		+sm
-			align-items: center
-			width: 100%
-
-	&__button-telegram
-		display: block
-		margin: 12px 0
-		font-weight: 600
-		position: relative
-		&:before
-			background: url("../img/telegram.svg") no-repeat
-			position: absolute
-			display: block
-			left: 50px
-			content: ''
-			width: 24px
-			height: 24px
-			+md
-				left: 25px
-			+sm
-				left: 35px
-
-
-	&__email-link
-		margin: 16px 0 0 60px
-		text-decoration: none
-		color: $white
-		font-weight: 600
-		+md
-			margin-left: 0
-		+sm
-			margin: 16px auto
-
-	&__subscribe
-		width: 52%
-		display: flex
-		flex-direction: column
-		border: 16px $light-cyan solid
-		border-radius: 8px
-		+md
-			width: 55%
-		+sm
-			width: 100%
-
-	&__subscribe-title
-		padding: 44px 50px 0
-		line-height: 1
-		font-size: 60px
-		font-weight: 600
-		+md
-			font-size: 48px
-			padding: 34px 32px 0
-		+sm
-			padding: 34px 34px 0
-			font-size: 36px
-
-	&__subscribe-title--thin
-		font-weight: 200
-
-	&__email-wrapper
-		position: relative
-		margin: 36px 50px 50px
+		height: 100%
+		overflow: hidden
 		&:after
-			content: ""
+			content: ''
 			position: absolute
-			background-color: $light-cyan
 			width: 100%
-			height: 2px
-			bottom: -15px
+			height: 50000%
+			background-color: $blue
+			transform: skewY(30deg)
+			top: 120%
 		+md
-			margin: 34px 32px 0
+			&:after
+				top: 59%
 		+sm
-			margin: 19px 32px 0
+			&:after
+				top: 20%
 
-	&__email
-		font-family: $montserrat
-		font-weight: 600
-		padding-left: 12px
-		width: 100%
-		color: white
-		background: none
-		font-size: 24px
-		&::placeholder
-			color: $white
-		+md
-			font-size: 18px
-		+sm
-			font-size: 16px
-
-	&__button-mail
-		display: block
-		margin: 12px 50px
-		padding: 20px 0
-		text-align: center
-		+md
-			margin: 44px 32px
-		+sm
-			padding: 20px 0
-			margin: 40px 38px
-
-	//Bottom block
-	&__bottom
+	&__wrapper
+		position: relative
+		max-width: 1170px
 		display: flex
-		flex-direction: row
-		padding-top: 88px
+		padding: 86px  100px 41px
+		margin: 0 auto
+		justify-content: space-between
+		+md
+			padding: 67px 55px 65px
 		+sm
 			flex-direction: column
-			padding-left: 15px
-			padding-top: 200px
+			padding: 130px 15px 13px
+			//align-items: center
 
-	&__social
-		position: relative
-		width: 100%
-		+sm
-			padding-bottom: 12px
-
-	&__list
+	&__social-list
 		display: flex
 
-	&__item
-		padding-right: 12px
-
-	&__social-link
-		display: block
+	&__social-item
+		margin-right: 12px
 		.icon
-			fill: $white
 			width: 36px
 			height: 36px
+			fill: $white
+		&:hover
+			.icon
+				opacity: 0.7
+		&:active
+			.icon
+				opacity: 0.85
+
+	&__social-link
+
+	&__info-list
+		font-family: $montserrat
+		display: flex
+		+md
+			margin-right: 16px
+		+sm
+			margin-right: 0
+			margin-top: 17px
+
+	&__info-item
+		margin-left: 40px
 		&:hover
 			opacity: 0.7
 		&:active
 			opacity: 0.85
-
-	&__info
-		padding-top: 5px
-		text-align: right
-		width: 100%
 		+sm
-			text-align: left
+			margin-left: 0
+			&:last-child
+				margin-left: 37px
 
-	&__link
-		margin-left: 38px
+	&__info-link
 		font-weight: 600
 		color: $white
 		text-decoration: none
-		+sm
-			margin-left: 0
-			margin-right: 39px
+		line-height: 2
+		letter-spacing: 0.5px
 
