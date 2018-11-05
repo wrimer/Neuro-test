@@ -1,7 +1,0 @@
-ProjectTitle: test-ilya
-
-PageList:
-- file: home.html
-  ready: 100
-- file: tokens.html
-  ready: 50
